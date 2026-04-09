@@ -1,0 +1,25 @@
+[2026-04-09T17:39:24Z] === ENRICH ITERATION 1 START | repo=tqdm/tqdm sha=75bdb6c3 ===
+[2026-04-09T17:39:24Z] [iter=1] PHASE START: enrich repo=tqdm/tqdm sha=75bdb6c3 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/75bdb6c3-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/75bdb6c379bcfc6c592b6342dc791a092b5d6ae0.nq.gz
+[2026-04-09T17:39:33Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-04-09T17:39:36Z] [iter=1] AST store loaded triples=366057 load_secs=2 mem_mb=562 MB
+[2026-04-09T17:39:36Z] [iter=1] Step 2: Finding LSP targets mem_mb=562 MB
+[2026-04-09T17:39:37Z] [iter=1] LSP targets found call_sites=3174 imports=265 extends=41 implements=0 secs=1
+[2026-04-09T17:39:37Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=562 MB
+[2026-04-09T17:39:39Z] [iter=1] Position index built positions=24136 nodes_with_types=31802 secs=2 mem_mb=562 MB
+[2026-04-09T17:39:39Z] [iter=1] Step 3: Starting LSP resolution mem_mb=562 MB already_completed_types=[] already_completed_files=0
+[2026-04-09T17:39:39Z] [iter=1] Resolving target type target_type=call_site count=3174
+[2026-04-09T17:40:12Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.8 files_done=2 resolved=151 errors=194 current=tests/tests_tqdm.py
+[2026-04-09T17:42:07Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.7 files_done=3 resolved=436 errors=922 current=tests/tests_pandas.py
+[2026-04-09T17:42:44Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.3 files_done=6 resolved=512 errors=1159 current=tests/conftest.py
+[2026-04-09T17:43:17Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.9 files_done=13 resolved=692 errors=1361 current=tqdm/__init__.py
+[2026-04-09T17:43:48Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.4 files_done=20 resolved=840 errors=1545 current=tests/tests_asyncio.py
+[2026-04-09T17:44:20Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.9 files_done=29 resolved=965 errors=1718 current=tqdm/contrib/__init__.py
+[2026-04-09T17:44:51Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.4 files_done=49 resolved=1099 errors=1916 current=examples/async_coroutines.py
+[2026-04-09T17:44:56Z] [iter=1] Target type resolved target_type=call_site resolved=1125 errors=1942 secs=317 mem_mb=562 MB
+[2026-04-09T17:44:56Z] [iter=1] Resolving target type target_type=import_statement count=265
+[2026-04-09T17:44:59Z] [iter=1] Target type resolved target_type=import_statement resolved=223 errors=0 secs=3 mem_mb=562 MB
+[2026-04-09T17:44:59Z] [iter=1] Resolving target type target_type=extends_clause count=41
+[2026-04-09T17:45:00Z] [iter=1] Target type resolved target_type=extends_clause resolved=40 errors=0 secs=1 mem_mb=562 MB
+[2026-04-09T17:45:04Z] [iter=1] Step 5: Writing final enrichment file triples=29498
+[2026-04-09T17:45:04Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/75bdb6c379bcfc6c592b6342dc791a092b5d6ae0.nq.gz size_kb=549
+[2026-04-09T17:45:04Z] [iter=1] PHASE END: enrich elapsed_s=340 elapsed_min=5.7 total_triples=29498
